@@ -1,6 +1,6 @@
 package com.sonu.tictactoe
 
-import com.sonu.tictactoe.models.TickTacToeGame
+import com.sonu.tictactoe.models.TicTacToeGame
 import io.ktor.server.application.*
 import com.sonu.tictactoe.plugins.configureMonitoring
 import com.sonu.tictactoe.plugins.configureRouting
@@ -12,7 +12,7 @@ fun main(args: Array<String>): Unit =
 
 @Suppress("unused") // application.conf references the main function. This annotation prevents the IDE from marking it as unused.
 fun Application.module() {
-    val game = TickTacToeGame()
+    val game = TicTacToeGame()
     configureSockets()
     configureSerialization()
     configureMonitoring()
