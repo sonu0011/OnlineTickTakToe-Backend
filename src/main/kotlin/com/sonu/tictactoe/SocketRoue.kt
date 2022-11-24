@@ -12,7 +12,6 @@ import kotlinx.serialization.json.Json
 fun Route.socket(game: TickTacToeGame) {
     route("/play") {
         webSocket {
-
             val player = game.connectPlayer(this)
 
             if (player == null) {
